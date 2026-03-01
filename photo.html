@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的照片墙</title>
+  <style>
+    body {
+      background-color: #b7b7b7;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #333;
+      padding: 20px;
+    }
+
+    .photo-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .photo-item {
+      background-color: white;
+      padding: 10px;
+      border: radius 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .photo-item img {
+      width: 250px;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .photo-item p {
+      margin: 8px 0 4px;
+      color: #666;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin: 20px;
+      padding: 10px 20px;
+      background-color: #fdd0d0;
+      color: #333;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .back-link:hover {
+      background-color: #fcb0b0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>我的照片墙</h1>
+  <div class="photo-container">
+
+    <div class="photo-item">
+      <img src="images/1.jpg" alt="蕾塞">
+      <p>蕾塞</p>
+    </div>
+
+    <div class="photo-item">
+      <img src="images/1.jpg" alt="蕾塞">
+      <p>蕾塞</p>
+    </div>
+
+    <div class="photo-item">
+      <img src="images/1.jpg" alt="蕾塞">
+      <p>蕾塞</p>
+    </div>
+
+  </div>
+
+  <a href="index.html" class="back-link">返回主页</a>
+
+
+</body>
+
+</html>
