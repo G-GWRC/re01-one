@@ -4,85 +4,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的照片墙</title>
+  <title>我的照片墙</title> <!-- 浏览器标签栏的标题 -->
   <style>
     body {
       background-color: #b7b7b7;
+      /* 整个网页的背景色 */
       text-align: center;
+      /* 文字居中 */
       font-family: Arial, sans-serif;
+      /* 字体设置 */
+      margin: 0;
+      /* 去掉body默认的外边距 */
     }
 
     h1 {
+      /* 页面主题 */
       color: #333;
+      /* 字体颜色 */
       padding: 20px;
+      /* 标题四周留白 */
+      margin: 0;
+      /* 去掉标题默认的外边框 */
     }
 
     .photo-container {
-      max-width: 1000px;
+      /*  照片容器：放所有照片的大盒子 */
+      max-width: 1400px;
+      /* 容器最大宽度xxpx，大屏幕不会太宽 */
       margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      /* 水平居中 */
+      columns: 250px;
+      /* 瀑布流核心： 每列最小250px，自动调整列数 */
+      column-gap: 40px;
+      /* 列与列之间的左右间距 */
       padding: 20px;
+      /* 容器四周留白xxpx */
     }
 
     .photo-item {
+      /* 单张照片卡片 */
       background-color: white;
-      padding: 10px;
-      border: radius 8px;
+      /* 背景 */
+      border-radius: 8px;
+      /* 圆角参数 */
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      /* 灰色阴影，立体感 */
+      padding: 10px 10px 5px 10px;
+      /* 内边距：（顺时针-上右下左） */
+      margin: 20px;
+      /* 外边距参数 */
+      display: inline-block;
+      /* 瀑布流必须：让卡片像文字一样浮动 */
+      width: 100%;
+      /* 宽度占满前列 */
+      break-inside: avoid;
+      /* 防止图片被切成两半 */
     }
 
     .photo-item img {
-      width: 250px;
+      /* 卡片里的照片 */
+      width: 100%;
+      /* 图片宽度沾满卡片 */
       height: auto;
+      /* 高度自动（保持原图比例） */
       display: block;
+      /* 去掉图片底部的多余空白 */
       border-radius: 4px;
+      /* 图片圆角参数 */
     }
 
     .photo-item p {
-      margin: 8px 0 4px;
+      /* 卡片里的文字（图片说明） */
+      margin: 8px 0 5px 0;
+      /* 外边距（上右下左） */
       color: #666;
+      /* 灰色文字 */
+      font-size: 14px;
+      /* 字号参数 */
     }
 
     .back-link {
+      /* 返回主页链接 */
       display: inline-block;
+      /* 让链接可以设置宽高 */
       margin: 20px;
+      /* 外边参数 */
       padding: 10px 20px;
+      /* 内边距（上下  左右） */
       background-color: #fdd0d0;
+      /* 背景 */
       color: #333;
+      /* 文字 */
       text-decoration: none;
+      /* 去掉下划线 */
       border-radius: 5px;
+      /* 圆角 */
     }
 
     .back-link:hover {
+      /* 鼠标悬停时 */
       background-color: #fcb0b0;
+      /* 变成深一点的粉色 */
     }
   </style>
 </head>
 
-<body>
-  <h1>我的照片墙</h1>
-  <div class="photo-container">
+<body> <!-- 页面主体：显示在浏览器里的内容 -->
+  <h1>我的照片墙</h1> <!-- 页面主标题 -->
+  <div class="photo-container"> <!-- 照片容器开始 -->
+
+    <div class="photo-item"> <!-- 第一个照片卡片 -->
+      <img src="images/ls01.jpg" alt="蕾塞"> <!--  图片路径和替代文字 -->
+      <p>蕾塞</p> <!--  图片文字说明 -->
+    </div>
+
+    <div class="photo-item"> <!-- 第二张图片 -->
+      <img src="images/fy01.jpg" alt="方源">
+      <p>方源</p>
+    </div>
 
     <div class="photo-item">
-      <img src="images/1.jpg" alt="蕾塞">
+      <img src="images/eye01.jpg" alt="眼睛">
+      <p>眼睛</p>
+    </div>
+
+    <div class="photo-item">
+      <img src="images/ls02.jpg" alt="蕾塞">
       <p>蕾塞</p>
     </div>
 
     <div class="photo-item">
-      <img src="images/1.jpg" alt="蕾塞">
-      <p>蕾塞</p>
+      <img src="images/se01.jpg" alt="甚尔">
+      <p>甚尔</p>
     </div>
 
     <div class="photo-item">
-      <img src="images/1.jpg" alt="蕾塞">
-      <p>蕾塞</p>
+      <img src="images/eye02.jpg" alt="眼睛">
+      <p>眼睛</p>
     </div>
+
+    <!-- <div class="photo-item">
+      <img src="images/gr-photo.jpg" alt="玟橙">
+      <p>玟橙</p>
+    </div> -->
 
   </div>
 
+  </div> <!-- 照片容器结束 -->
+  <!-- 返回主页链接 -->
   <a href="index.html" class="back-link">返回主页</a>
 
 
